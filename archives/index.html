@@ -1,0 +1,256 @@
+
+  <!DOCTYPE HTML>
+<html lang="zh-CN,zh-TW,default">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>归档 | 焖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="yangzz">
+    
+
+    
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="焖">
+<meta property="og:url" content="http://noname007.github.io/essays/archives/index.html">
+<meta property="og:site_name" content="焖">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="焖">
+<meta name="twitter:description">
+
+    
+    <link rel="alternative" href="/atom.xml" title="焖" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/essays/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/essays/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/essays/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/essays/css/style.css" type="text/css">
+</head>
+
+    <body>
+      <header>
+        
+<div>
+		
+			<div id="imglogo">
+				<a href="/essays/"><img src="/essays/img/logo.png" alt="焖" title="焖"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/essays/" title="焖">焖</a></h1>
+				<h2 class="blog-motto">好习惯受益终生</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/essays/">主页</a></li>
+					
+						<li><a href="/essays/archives">归档</a></li>
+					
+						<li><a href="/essays/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:noname007.github.io/essays">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+      </header>
+      <div id="container">
+        
+
+<div class="archive-title" >
+  <h2 class="archive-icon">归档</h2>
+  
+  <div class="archiveslist archive-float clearfix">
+   <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/essays/archives/2015/07/">2015 年 07 月</a><span class="archive-list-count">1</span></li></ul>
+ </div>
+  
+</div>
+<div id="main" class="archive-part clearfix">
+  <div id="archive-page">
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/essays/2015/07/04/one-year-abstract/" title="工作一年总结" itemprop="url">
+  
+
+    <time datetime="2015-07-04T10:40:13.000Z" itemprop="datePublished">2015-07-04</time>
+
+
+    <h1 itemprop="name">工作一年总结</h1>
+
+  </a>
+</section>
+
+
+  </div>
+</div>
+
+      </div>
+      <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Larry Page in Google. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:1479418380@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/essays/about" target="_blank" title="yangzz">yangzz</a>
+		
+		
+		</p>
+</div>
+</footer>
+      <script src="/essays/js/jquery-2.0.3.min.js"></script>
+<script src="/essays/js/jquery.imagesloaded.min.js"></script>
+<script src="/essays/js/gallery.js"></script>
+<script src="/essays/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/essays/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/essays/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/essays/img/scrollup.png"/></a>
+	</div>
+	<script src="/essays/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+    </body>
+   </html>
