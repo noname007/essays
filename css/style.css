@@ -2331,3 +2331,96 @@ pre .javascript .function {
     display: none !important;
   }
 }
+body {
+  background-color: #fff;
+}
+.resume {
+  border: 1px solid #696;
+  padding: 1px 1px;
+  margin: 0 auto;
+  background-color: #fff;
+  line-height: 1.6;
+  height: 1000px;
+  width: 800px;
+}
+@media screen and (max-width: 860px) {
+  .resume {
+    width: 100%;
+  }
+}
+.resume-content {
+  float: right;
+  width: 580px;
+  height: 100%;
+  border-left: 1px solid #696;
+  padding: 1px 1px;
+}
+@media screen and (max-width: 860px) {
+  .resume-content {
+    width: 100%;
+    margin-left: -210px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .resume-content {
+    margin-left: 0;
+    float: none;
+  }
+}
+.resume h1,
+.resume h2,
+.resume h3 {
+  font-weight: bold;
+  border-bottom: 1px solid color-border;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.resume p {
+  margin-top: 15px;
+}
+.resume-entry {
+  margin: 30px;
+}
+@media screen and (max-width: 860px) {
+  .resume-entry {
+    margin-left: 200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .resume-entry {
+    padding-left: 30px;
+    margin-left: 0px;
+  }
+}
+.resume-entry ul,
+.resume-entry ol {
+  margin-left: 20px;
+}
+.resume-left {
+  float: left;
+  width: 150px;
+  margin: 30px;
+}
+@media screen and (max-width: 500px) {
+  .resume-left {
+    float: none;
+    margin: 0 auto;
+  }
+}
+.resume-left img {
+  border: 1px solid #696;
+  padding: 1px 1px;
+  max-width: 100%;
+  margin: 20px 0;
+}
+.resume-left .strong {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.resume-left ul li {
+  list-style: none;
+}
+.resume-left span {
+  font-style: italic;
+}

@@ -4,23 +4,92 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>good-sentence | 焖</title>
+    <title>linux-cmd | 焖</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="yangzz">
     
 
     
-    <meta name="description" content="可做可不做的好的事，选择做。可做可不做的坏事，选择不做。勿以恶小而为之,勿以善小而不为。">
+    <meta name="description" content="sort
+
+
+参数
+含义
+
+
+
+
+-kx
+按照第x列的大小进行排序
+
+
+-n
+按照数字比较，默认字典序排序
+
+
+
+du
+du -sh *统计当前文件夹下各个文件的大小
+du -shm *统计当前文件夹下各个文件的大小,以M 为单位。-shk 以 KB为单位
+
+locatelinux 下可以使用 locate 和 find 来查找文件,但是 locate 在定位时要比 find 快.
+locate">
 <meta property="og:type" content="article">
-<meta property="og:title" content="good-sentence">
-<meta property="og:url" content="http://noname007.github.io/essays/2015/07/16/good-sentence/index.html">
+<meta property="og:title" content="linux-cmd">
+<meta property="og:url" content="http://noname007.github.io/essays/2015/08/04/linux-cmd/index.html">
 <meta property="og:site_name" content="焖">
-<meta property="og:description" content="可做可不做的好的事，选择做。可做可不做的坏事，选择不做。勿以恶小而为之,勿以善小而不为。">
-<meta property="og:updated_time" content="2015-07-17T09:54:02.898Z">
+<meta property="og:description" content="sort
+
+
+参数
+含义
+
+
+
+
+-kx
+按照第x列的大小进行排序
+
+
+-n
+按照数字比较，默认字典序排序
+
+
+
+du
+du -sh *统计当前文件夹下各个文件的大小
+du -shm *统计当前文件夹下各个文件的大小,以M 为单位。-shk 以 KB为单位
+
+locatelinux 下可以使用 locate 和 find 来查找文件,但是 locate 在定位时要比 find 快.
+locate">
+<meta property="og:updated_time" content="2015-08-04T10:14:42.078Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="good-sentence">
-<meta name="twitter:description" content="可做可不做的好的事，选择做。可做可不做的坏事，选择不做。勿以恶小而为之,勿以善小而不为。">
+<meta name="twitter:title" content="linux-cmd">
+<meta name="twitter:description" content="sort
+
+
+参数
+含义
+
+
+
+
+-kx
+按照第x列的大小进行排序
+
+
+-n
+按照数字比较，默认字典序排序
+
+
+
+du
+du -sh *统计当前文件夹下各个文件的大小
+du -shm *统计当前文件夹下各个文件的大小,以M 为单位。-shk 以 KB为单位
+
+locatelinux 下可以使用 locate 和 find 来查找文件,但是 locate 在定位时要比 find 快.
+locate">
 
     
     <link rel="alternative" href="/atom.xml" title="焖" type="application/atom+xml">
@@ -80,14 +149,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/essays/2015/07/16/good-sentence/" title="good-sentence" itemprop="url">good-sentence</a>
+      <a href="/essays/2015/08/04/linux-cmd/" title="linux-cmd" itemprop="url">linux-cmd</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/essays/about" title="yangzz" target="_blank" itemprop="author">yangzz</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-15T17:25:37.000Z" itemprop="datePublished"> 发表于 2015-07-16</time>
+    <time datetime="2015-08-04T10:14:42.000Z" itemprop="datePublished"> 发表于 2015-08-04</time>
     
   </p>
 </header>
@@ -96,16 +165,87 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sort"><span class="toc-number">1.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#du"><span class="toc-number">2.</span> <span class="toc-text">du</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#locate"><span class="toc-number">3.</span> <span class="toc-text">locate</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#命令选项"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">命令选项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题总结_FAQ"><span class="toc-number">3.1.</span> <span class="toc-text">问题总结 FAQ</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>可做可不做的好的事，选择做。可做可不做的坏事，选择不做。<br>勿以恶小而为之,勿以善小而不为。</p>
+		<h1 id="sort">sort</h1><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-kx</code></td>
+<td>按照第x列的大小进行排序</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>按照数字比较，默认字典序排序</td>
+</tr>
+</tbody>
+</table>
+<h1 id="du">du</h1><ul>
+<li><code>du -sh *</code><br>统计当前文件夹下各个文件的大小</li>
+<li><code>du -shm *</code><br>统计当前文件夹下各个文件的大小,以<code>M</code> 为单位。<code>-shk</code> 以 <code>KB</code>为单位</li>
+</ul>
+<h1 id="locate">locate</h1><blockquote><p>linux 下可以使用 locate 和 find 来查找文件,但是 locate 在定位时要比 find 快.</p>
+<p>locate 并不是穿梭于档案文件中查找,而是在<strong>数据库</strong>查找文件.find 正好相反,他的查找要穿梭于档案文件中.</p>
+</blockquote>
+<p><code>locate [-ir] keyword</code><br><code>locate -- u</code> </p>
+<h4 id="命令选项">命令选项</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u</td>
+<td>更新数据库</td>
+</tr>
+<tr>
+<td>i</td>
+<td>不区分大小写</td>
+</tr>
+<tr>
+<td>r</td>
+<td>后面可以接收正则表达式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>参考</strong></p>
+<ul>
+<li><a href="http://yijiebuyi.com/blog/58d0b9eec7f18769439f388a8037c151.html" target="_blank" rel="external">locate 在linux下快速定位文档</a></li>
+</ul>
+<h2 id="问题总结_FAQ">问题总结 FAQ</h2><ol>
+<li><p>crontab不执行问题</p>
+<blockquote><p>今天有个服务不能使用了，查来查去，原来 <code>crontab</code> 被干掉了。装上后还是无法运行，原来还要依赖 <code>crond</code> 这个服务</p>
+</blockquote>
+<ul>
+<li>检查文件具有可执行权限 <code>chmod a+x</code></li>
+<li>crond服务是否启动。查看及启动方式 <code>service crond start</code> <code>service crond status</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>参考</strong></p>
+<ul>
+<li><a href="http://www.nginx.cn/2451.html" target="_blank" rel="external">crontab不执行问题</a></li>
+<li><a href="http://baike.baidu.com/link?url=4A3zDEAEGxKEkZV0GihvwInk1Rx9lCsJEZTeBUCgZq6a_h519pBSgCaCynxbiURbpXFUZ7Qqn-iF2Pj6Wp58Bq" target="_blank" rel="external">crond</a></li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/essays/tags/draft/">draft</a>
+  </div>
 
 </div>
 
@@ -113,7 +253,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://noname007.github.io/essays/2015/07/16/good-sentence/" data-title="good-sentence | 焖" data-tsina="null" class="share clearfix">
+	  <div data-url="http://noname007.github.io/essays/2015/08/04/linux-cmd/" data-title="linux-cmd | 焖" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -128,9 +268,9 @@
  
 
 <div class="next">
-<a href="/essays/2015/07/12/gallary/"  title="gallary">
+<a href="/essays/2015/08/04/git-use-abstract/"  title="git 使用总结">
  <strong>下一篇：</strong><br/> 
- <span>gallary
+ <span>git 使用总结
 </span>
 </a>
 </div>
@@ -145,7 +285,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sort"><span class="toc-number">1.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#du"><span class="toc-number">2.</span> <span class="toc-text">du</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#locate"><span class="toc-number">3.</span> <span class="toc-text">locate</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#命令选项"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">命令选项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题总结_FAQ"><span class="toc-number">3.1.</span> <span class="toc-text">问题总结 FAQ</span></a></li></ol></li></ol>
  
   </div>
 
@@ -161,7 +301,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/essays/tags/札记/" title="札记">札记<sup>1</sup></a></li>
+				<li><a href="/essays/tags/draft/" title="draft">draft<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/essays/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
 			
