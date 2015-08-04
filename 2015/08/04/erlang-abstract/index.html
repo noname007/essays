@@ -4,80 +4,89 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>git 使用总结 | 焖</title>
+    <title>erlang 笔记 | 焖</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="yangzz">
     
 
     
-    <meta name="description" content="&amp;lt;!-- [TOC] --&amp;gt;
-常用命令&amp;gt; git
+    <meta name="description" content="并发难点
 
-git add
-git branch
-git checkout
-git cherry-pick
-git clone
-git commit
-git diff
-git fetch
-git init
-git log
-git merge
-git mv
-git pull
-git push
-git rebase
-git remote
-git reset">
+共享内存 数据污染
+
+消息模型，异步io
+
+
+第二章快速入门
+安装、基本使用、基本的数据结构，操作，语法、快速入门
+变量与其他语言的不同地方
+模式匹配    通配符
+整数、浮点数、原子、元组、列表、字符串、字符集、
+第三章顺序编程初步
+程序如果切分的话可以分成数据(结构)，及对其操作、(数据)类型之间的转化，还有流程控制
+
+模块
+函数
+
+控制抽象、高阶函数
+
+断言 when
+记录
+控制">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git 使用总结">
-<meta property="og:url" content="http://noname007.github.io/essays/2015/08/04/git-use-abstract/index.html">
+<meta property="og:title" content="erlang 笔记">
+<meta property="og:url" content="http://noname007.github.io/essays/2015/08/04/erlang-abstract/index.html">
 <meta property="og:site_name" content="焖">
-<meta property="og:description" content="&amp;lt;!-- [TOC] --&amp;gt;
-常用命令&amp;gt; git
+<meta property="og:description" content="并发难点
 
-git add
-git branch
-git checkout
-git cherry-pick
-git clone
-git commit
-git diff
-git fetch
-git init
-git log
-git merge
-git mv
-git pull
-git push
-git rebase
-git remote
-git reset">
-<meta property="og:updated_time" content="2015-08-04T10:10:11.663Z">
+共享内存 数据污染
+
+消息模型，异步io
+
+
+第二章快速入门
+安装、基本使用、基本的数据结构，操作，语法、快速入门
+变量与其他语言的不同地方
+模式匹配    通配符
+整数、浮点数、原子、元组、列表、字符串、字符集、
+第三章顺序编程初步
+程序如果切分的话可以分成数据(结构)，及对其操作、(数据)类型之间的转化，还有流程控制
+
+模块
+函数
+
+控制抽象、高阶函数
+
+断言 when
+记录
+控制">
+<meta property="og:updated_time" content="2015-08-04T10:36:41.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git 使用总结">
-<meta name="twitter:description" content="&amp;lt;!-- [TOC] --&amp;gt;
-常用命令&amp;gt; git
+<meta name="twitter:title" content="erlang 笔记">
+<meta name="twitter:description" content="并发难点
 
-git add
-git branch
-git checkout
-git cherry-pick
-git clone
-git commit
-git diff
-git fetch
-git init
-git log
-git merge
-git mv
-git pull
-git push
-git rebase
-git remote
-git reset">
+共享内存 数据污染
+
+消息模型，异步io
+
+
+第二章快速入门
+安装、基本使用、基本的数据结构，操作，语法、快速入门
+变量与其他语言的不同地方
+模式匹配    通配符
+整数、浮点数、原子、元组、列表、字符串、字符集、
+第三章顺序编程初步
+程序如果切分的话可以分成数据(结构)，及对其操作、(数据)类型之间的转化，还有流程控制
+
+模块
+函数
+
+控制抽象、高阶函数
+
+断言 when
+记录
+控制">
 
     
     <link rel="alternative" href="/atom.xml" title="焖" type="application/atom+xml">
@@ -137,14 +146,14 @@ git reset">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/essays/2015/08/04/git-use-abstract/" title="git 使用总结" itemprop="url">git 使用总结</a>
+      <a href="/essays/2015/08/04/erlang-abstract/" title="erlang 笔记" itemprop="url">erlang 笔记</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/essays/about" title="yangzz" target="_blank" itemprop="author">yangzz</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-04T07:09:47.000Z" itemprop="datePublished"> 发表于 2015-08-04</time>
+    <time datetime="2015-08-04T10:36:41.000Z" itemprop="datePublished"> 发表于 2015-08-04</time>
     
   </p>
 </header>
@@ -153,37 +162,79 @@ git reset">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常用命令"><span class="toc-number">1.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#协作模型"><span class="toc-number">2.</span> <span class="toc-text">协作模型</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章"><span class="toc-number">1.</span> <span class="toc-text">第二章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三章"><span class="toc-number">2.</span> <span class="toc-text">第三章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些知识点"><span class="toc-number">3.</span> <span class="toc-text">一些知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#华氏温度(f)——摄氏温度(c)之间的转化公式"><span class="toc-number">3.1.</span> <span class="toc-text">华氏温度(f)——摄氏温度(c)之间的转化公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BIF"><span class="toc-number">4.</span> <span class="toc-text">BIF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#math"><span class="toc-number">4.1.</span> <span class="toc-text">math</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lists"><span class="toc-number">4.2.</span> <span class="toc-text">lists</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<!-- [TOC] -->
-<h1 id="常用命令">常用命令</h1><pre><code><span class="blockquote">&gt; git</span>
-</code></pre><ul>
-<li><code>git add</code></li>
-<li><code>git branch</code></li>
-<li><code>git checkout</code></li>
-<li><code>git cherry-pick</code></li>
-<li><code>git clone</code></li>
-<li><code>git commit</code></li>
-<li><code>git diff</code></li>
-<li><code>git fetch</code></li>
-<li><code>git init</code></li>
-<li><code>git log</code></li>
-<li><code>git merge</code></li>
-<li><code>git mv</code></li>
-<li><code>git pull</code></li>
-<li><code>git push</code></li>
-<li><code>git rebase</code></li>
-<li><code>git remote</code></li>
-<li><code>git reset</code></li>
-<li><code>git rm</code></li>
-<li><code>git show</code></li>
-<li><code>git stash</code></li>
-<li><code>git status</code></li>
-<li><code>git tag</code></li>
+		<p>并发难点</p>
+<ul>
+<li><p>共享内存 数据污染</p>
+</li>
+<li><p>消息模型，异步io</p>
+</li>
 </ul>
-<h1 id="协作模型">协作模型</h1>  
+<h2 id="第二章">第二章</h2><pre><code>快速入门
+</code></pre><p>安装、基本使用、基本的数据结构，操作，语法、快速入门</p>
+<p>变量与其他语言的不同地方</p>
+<p>模式匹配<br>    通配符</p>
+<p>整数、浮点数、原子、元组、列表、字符串、字符集、</p>
+<h2 id="第三章">第三章</h2><pre><code>顺序编程初步
+</code></pre><p>程序如果切分的话可以分成数据(结构)，及对其操作、(数据)类型之间的转化，还有流程控制</p>
+<ul>
+<li>模块</li>
+<li><p>函数</p>
+</li>
+<li><p>控制抽象、高阶函数</p>
+</li>
+<li>断言 when</li>
+<li>记录</li>
+<li>控制结构： case if </li>
+<li>简单列表处理、列表解析</li>
+<li>算术表达式</li>
+<li></li>
+</ul>
+<p>流程控制：顺序、条件、循环三中结构，对于不同的语言会有不同的形式，case if when 模式匹配 ，迭代 递归 高阶函数——-&gt;整体抽象,可以用于实现上面三种结构</p>
+<h2 id="一些知识点">一些知识点</h2><h3 id="华氏温度(f)——摄氏温度(c)之间的转化公式">华氏温度(f)——摄氏温度(c)之间的转化公式</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = 32 + c<span class="keyword">*</span> 9/5</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>example:<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">c = 40,f=32+72=104.</span><br></pre></td></tr></table></figure>
+<h2 id="BIF">BIF</h2><h3 id="math">math</h3><pre><code>数学库
+</code></pre><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sqrt</td>
+<td>开平方根</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="lists">lists</h3><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>map</td>
+<td></td>
+</tr>
+<tr>
+<td>filter</td>
+<td></td>
+</tr>
+<tr>
+<td>sum</td>
+</tr>
+</tbody>
+</table>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -191,7 +242,7 @@ git reset">
 
   <div class="article-tags">
   
-  <span></span> <a href="/essays/tags/git/">git</a>
+  <span></span> <a href="/essays/tags/erlang/">erlang</a><a href="/essays/tags/读书笔记/">读书笔记</a>
   </div>
 
 </div>
@@ -200,7 +251,7 @@ git reset">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://noname007.github.io/essays/2015/08/04/git-use-abstract/" data-title="git 使用总结 | 焖" data-tsina="null" class="share clearfix">
+	  <div data-url="http://noname007.github.io/essays/2015/08/04/erlang-abstract/" data-title="erlang 笔记 | 焖" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -213,14 +264,14 @@ git reset">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/essays/2015/08/04/linux-cmd/" title="linux-cmd">
-  <strong>上一篇：</strong><br/>
-  <span>
-  linux-cmd</span>
+
+<div class="next">
+<a href="/essays/2015/08/04/linux-cmd/"  title="linux-cmd">
+ <strong>下一篇：</strong><br/> 
+ <span>linux-cmd
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -232,7 +283,7 @@ git reset">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常用命令"><span class="toc-number">1.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#协作模型"><span class="toc-number">2.</span> <span class="toc-text">协作模型</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章"><span class="toc-number">1.</span> <span class="toc-text">第二章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三章"><span class="toc-number">2.</span> <span class="toc-text">第三章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些知识点"><span class="toc-number">3.</span> <span class="toc-text">一些知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#华氏温度(f)——摄氏温度(c)之间的转化公式"><span class="toc-number">3.1.</span> <span class="toc-text">华氏温度(f)——摄氏温度(c)之间的转化公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BIF"><span class="toc-number">4.</span> <span class="toc-text">BIF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#math"><span class="toc-number">4.1.</span> <span class="toc-text">math</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lists"><span class="toc-number">4.2.</span> <span class="toc-text">lists</span></a></li></ol></li></ol>
  
   </div>
 

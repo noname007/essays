@@ -63,7 +63,7 @@ du -shm *统计当前文件夹下各个文件的大小,以M 为单位。-shk 以
 
 locatelinux 下可以使用 locate 和 find 来查找文件,但是 locate 在定位时要比 find 快.
 locate">
-<meta property="og:updated_time" content="2015-08-04T10:14:42.078Z">
+<meta property="og:updated_time" content="2015-08-04T10:43:53.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux-cmd">
 <meta name="twitter:description" content="sort
@@ -165,7 +165,7 @@ locate">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sort"><span class="toc-number">1.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#du"><span class="toc-number">2.</span> <span class="toc-text">du</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#locate"><span class="toc-number">3.</span> <span class="toc-text">locate</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#命令选项"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">命令选项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题总结_FAQ"><span class="toc-number">3.1.</span> <span class="toc-text">问题总结 FAQ</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sort"><span class="toc-number">1.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#du"><span class="toc-number">2.</span> <span class="toc-text">du</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#locate"><span class="toc-number">3.</span> <span class="toc-text">locate</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#问题总结_FAQ"><span class="toc-number">4.</span> <span class="toc-text">问题总结 FAQ</span></a></li></ol>
 		
 		</div>
 		
@@ -194,8 +194,9 @@ locate">
 <h1 id="locate">locate</h1><blockquote><p>linux 下可以使用 locate 和 find 来查找文件,但是 locate 在定位时要比 find 快.</p>
 <p>locate 并不是穿梭于档案文件中查找,而是在<strong>数据库</strong>查找文件.find 正好相反,他的查找要穿梭于档案文件中.</p>
 </blockquote>
-<p><code>locate [-ir] keyword</code><br><code>locate -- u</code> </p>
-<h4 id="命令选项">命令选项</h4><table>
+<p><code>locate [-ir] keyword</code><br>更新数据库<br><del><code>locate -u</code></del><br><code>updatedb</code></p>
+<p><strong>命令选项</strong></p>
+<table>
 <thead>
 <tr>
 <th>参数</th>
@@ -203,10 +204,6 @@ locate">
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>u</td>
-<td>更新数据库</td>
-</tr>
 <tr>
 <td>i</td>
 <td>不区分大小写</td>
@@ -221,7 +218,7 @@ locate">
 <ul>
 <li><a href="http://yijiebuyi.com/blog/58d0b9eec7f18769439f388a8037c151.html" target="_blank" rel="external">locate 在linux下快速定位文档</a></li>
 </ul>
-<h2 id="问题总结_FAQ">问题总结 FAQ</h2><ol>
+<h1 id="问题总结_FAQ">问题总结 FAQ</h1><ol>
 <li><p>crontab不执行问题</p>
 <blockquote><p>今天有个服务不能使用了，查来查去，原来 <code>crontab</code> 被干掉了。装上后还是无法运行，原来还要依赖 <code>crond</code> 这个服务</p>
 </blockquote>
@@ -244,7 +241,7 @@ locate">
 
   <div class="article-tags">
   
-  <span></span> <a href="/essays/tags/draft/">draft</a>
+  <span></span> <a href="/essays/tags/linux/">linux</a>
   </div>
 
 </div>
@@ -266,6 +263,14 @@ locate">
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/essays/2015/08/04/erlang-abstract/" title="erlang 笔记">
+  <strong>上一篇：</strong><br/>
+  <span>
+  erlang 笔记</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/essays/2015/08/04/git-use-abstract/"  title="git 使用总结">
@@ -285,7 +290,7 @@ locate">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sort"><span class="toc-number">1.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#du"><span class="toc-number">2.</span> <span class="toc-text">du</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#locate"><span class="toc-number">3.</span> <span class="toc-text">locate</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#命令选项"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">命令选项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题总结_FAQ"><span class="toc-number">3.1.</span> <span class="toc-text">问题总结 FAQ</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sort"><span class="toc-number">1.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#du"><span class="toc-number">2.</span> <span class="toc-text">du</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#locate"><span class="toc-number">3.</span> <span class="toc-text">locate</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#问题总结_FAQ"><span class="toc-number">4.</span> <span class="toc-text">问题总结 FAQ</span></a></li></ol>
  
   </div>
 
@@ -301,13 +306,19 @@ locate">
 		<ul class="clearfix">
 		
 			
-				<li><a href="/essays/tags/draft/" title="draft">draft<sup>1</sup></a></li>
+				<li><a href="/essays/tags/linux/" title="linux">linux<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/essays/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
+			
+				<li><a href="/essays/tags/读书笔记/" title="读书笔记">读书笔记<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/essays/tags/erlang/" title="erlang">erlang<sup>1</sup></a></li>
 			
 		
 			
