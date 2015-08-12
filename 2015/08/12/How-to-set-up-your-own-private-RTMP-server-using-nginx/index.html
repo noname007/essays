@@ -5,13 +5,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>焖</title>
+  <title>【译】How to set up your own private RTMP server using nginx | 焖</title>
   <meta name="author" content="yangzz">
+  
+  <meta name="description" content="如何使用nginx搭建一个私有的RTMP服务器原文地址: https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/
+
+大多数人喜欢使用Twitch.tv和Ustr">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="【译】How to set up your own private RTMP server using nginx"/>
   <meta property="og:site_name" content="焖"/>
 
   
@@ -200,8 +204,7 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -223,7 +226,7 @@
       
       
   
-    <h1 class="title"><a href="/essays/2015/08/12/How-to-set-up-your-own-private-RTMP-server-using-nginx/">【译】How to set up your own private RTMP server using nginx</a></h1>
+    <h1 class="title">【译】How to set up your own private RTMP server using nginx</h1>
   
 
     </header>
@@ -279,56 +282,27 @@ $ sudo <span class="regexp">/usr/</span>local<span class="regexp">/nginx/</span>
       
         
         
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
   
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
+  <div class="tags">
+    <a href="/essays/tags/nginx/">nginx</a>, <a href="/essays/tags/rtmp/">rtmp</a>, <a href="/essays/tags/翻译/">翻译</a>
   </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
 </div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-08-11T16:52:41.000Z"><a href="/essays/2015/08/12/benifit-writting-blog/">2015-08-12</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/essays/2015/08/12/benifit-writting-blog/">写blog的好处</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <ul>
-<li>积累<br>  经验的积累，知识的积累，有些东西，过段时间后，就会遗忘，而写则会加深理解，</li>
-<li>参考<br>   方便为日后给自己参考，也给其他人可以做一个参考</li>
-<li>加深理解，训练逻辑<br>  在写blog的时候自己又重新思考了一边，逻辑思维上训练了一边，训练自己的表达能力，逻辑思考能力</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=3326447" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->      
       <div class="clearfix"></div>
     </footer>
   </div>
@@ -336,354 +310,37 @@ $ sudo <span class="regexp">/usr/</span>local<span class="regexp">/nginx/</span>
 
 
 
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
+ <nav id="pagination" >
     
-      <img src="">
     
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-08-05T11:07:02.000Z"><a href="/essays/2015/08/05/php-upload-file/">2015-08-05</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/essays/2015/08/05/php-upload-file/">PHP文件上传</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>上传一个213M的文件的时候一直报IOerror。首先想到的是php上传文件大小的限制，改为300兆后，不起作用，就感觉是上传的的时候脚本执行的时间太长了，就修改<code>max_input_time</code> 为6000 还是不起作用，琢磨是不是<code>max_input_time</code>解析数据的时间出了问题，最后发现也不是，原来是nginx设置的太小了，改为500m,问题立马解决了。</p>
-<p>php 和 nginx 设置如下</p>
-<p>ngxin server 里面配置如下<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">     ***</span><br><span class="line">     client_max_body_size 1000M;</span><br><span class="line">     ****</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>php.ini 配置如下<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">file_uploads = On ;是否允许通过HTTP上传文件的开关。默认为ON即是开</span><br><span class="line">upload_max_filesize = 500M ;上传文件上限 </span><br><span class="line">upload_tmp_dir ;文件上传至服务器上存储临时文件的地方，如果没指定就会用系统默认的临时文件夹。</span><br><span class="line">如果要上传比较大的文件，仅仅以上两条还不够，必须把服务器缓存上限调大，把脚本最大执行时间变长 </span><br><span class="line">post_max_size = 500M ; POST给PHP的所能接收的最大值</span><br><span class="line">max_execution_time = 30 ; 每个PHP页面运行的最大时间值 Maximum execution time of each script, in seconds脚本最大执行时间 </span><br><span class="line">max_input_time = 60 ; 每个PHP页面接收数据所需的最大时间 解析一次请求时间上线 Maximum amount of time each script may spend parsing request data </span><br><span class="line">memory_limit = 128M ;  每个PHP页面所吃掉的最大内存 内存上限 Maximum amount of memory a script may consume (128MB)</span><br></pre></td></tr></table></figure></p>
-<p>相关参数解释</p>
-<h2 id="参考">参考</h2><p><a href="http://www.jb51.net/article/18975.htm" target="_blank" rel="external">http://www.jb51.net/article/18975.htm</a><br><a href="http://www.360doc.com/content/13/1210/11/14452132_336027836.shtml" target="_blank" rel="external">http://www.360doc.com/content/13/1210/11/14452132_336027836.shtml</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
+    <a href="/essays/2015/08/12/benifit-writting-blog/" class="alignright next" >下一页</a>
     
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zippera"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->  
+
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-08-04T10:36:41.000Z"><a href="/essays/2015/08/04/erlang-abstract/">2015-08-04</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/essays/2015/08/04/erlang-abstract/">erlang 笔记</a></h1>
-  
+</section>
 
-    </header>
-    <div class="entry">
-      
-        <p>并发难点</p>
-<ul>
-<li><p>共享内存 数据污染</p>
-</li>
-<li><p>消息模型，异步io</p>
-</li>
-</ul>
-<h2 id="第二章">第二章</h2><pre><code>快速入门
-</code></pre><p>安装、基本使用、基本的数据结构，操作，语法、快速入门</p>
-<p>变量与其他语言的不同地方</p>
-<p>模式匹配<br>    通配符</p>
-<p>整数、浮点数、原子、元组、列表、字符串、字符集、</p>
-<h2 id="第三章">第三章</h2><pre><code>顺序编程初步
-</code></pre><p>程序如果切分的话可以分成数据(结构)，及对其操作、(数据)类型之间的转化，还有流程控制</p>
-<ul>
-<li>模块</li>
-<li><p>函数</p>
-</li>
-<li><p>控制抽象、高阶函数</p>
-</li>
-<li>断言 when</li>
-<li>记录</li>
-<li>控制结构： case if </li>
-<li>简单列表处理、列表解析</li>
-<li>算术表达式</li>
-<li></li>
-</ul>
-<p>流程控制：顺序、条件、循环三中结构，对于不同的语言会有不同的形式，case if when 模式匹配 ，迭代 递归 高阶函数——-&gt;整体抽象,可以用于实现上面三种结构</p>
-<h2 id="一些知识点">一些知识点</h2><h3 id="华氏温度(f)——摄氏温度(c)之间的转化公式">华氏温度(f)——摄氏温度(c)之间的转化公式</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = 32 + c<span class="keyword">*</span> 9/5</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>example:<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line">c = 40,f=32+72=104.</span><br></pre></td></tr></table></figure>
-<h2 id="BIF">BIF</h2><h3 id="math">math</h3><pre><code>数学库
-</code></pre><table>
-<thead>
-<tr>
-<th>名字</th>
-<th>函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>sqrt</td>
-<td>开平方根</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="lists">lists</h3><table>
-<thead>
-<tr>
-<th>名字</th>
-<th>函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>map</td>
-<td></td>
-</tr>
-<tr>
-<td>filter</td>
-<td></td>
-</tr>
-<tr>
-<td>sum</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-08-04T10:14:42.000Z"><a href="/essays/2015/08/04/linux-cmd/">2015-08-04</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/essays/2015/08/04/linux-cmd/">linux-cmd</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1 id="sort">sort</h1><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-kx</code></td>
-<td>按照第x列的大小进行排序</td>
-</tr>
-<tr>
-<td><code>-n</code></td>
-<td>按照数字比较，默认字典序排序</td>
-</tr>
-</tbody>
-</table>
-<h1 id="du">du</h1><ul>
-<li><code>du -sh *</code><br>统计当前文件夹下各个文件的大小</li>
-<li><code>du -shm *</code><br>统计当前文件夹下各个文件的大小,以<code>M</code> 为单位。<code>-shk</code> 以 <code>KB</code>为单位</li>
-</ul>
-<h1 id="locate">locate</h1><blockquote><p>linux 下可以使用 locate 和 find 来查找文件,但是 locate 在定位时要比 find 快.</p>
-<p>locate 并不是穿梭于档案文件中查找,而是在<strong>数据库</strong>查找文件.find 正好相反,他的查找要穿梭于档案文件中.</p>
-</blockquote>
-<p><code>locate [-ir] keyword</code><br>更新数据库<br><del><code>locate -u</code></del><br><code>updatedb</code></p>
-<p><strong>命令选项</strong></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>i</td>
-<td>不区分大小写</td>
-</tr>
-<tr>
-<td>r</td>
-<td>后面可以接收正则表达式</td>
-</tr>
-</tbody>
-</table>
-<p><strong>参考</strong></p>
-<ul>
-<li><a href="http://yijiebuyi.com/blog/58d0b9eec7f18769439f388a8037c151.html" target="_blank" rel="external">locate 在linux下快速定位文档</a></li>
-</ul>
-<h1 id="问题总结_FAQ">问题总结 FAQ</h1><ol>
-<li><p>crontab不执行问题</p>
-<blockquote><p>今天有个服务不能使用了，查来查去，原来 <code>crontab</code> 被干掉了。装上后还是无法运行，原来还要依赖 <code>crond</code> 这个服务</p>
-</blockquote>
-<ul>
-<li>检查文件具有可执行权限 <code>chmod a+x</code></li>
-<li>crond服务是否启动。查看及启动方式 <code>service crond start</code> <code>service crond status</code></li>
-</ul>
-</li>
-</ol>
-<p><strong>参考</strong></p>
-<ul>
-<li><a href="http://www.nginx.cn/2451.html" target="_blank" rel="external">crontab不执行问题</a></li>
-<li><a href="http://baike.baidu.com/link?url=4A3zDEAEGxKEkZV0GihvwInk1Rx9lCsJEZTeBUCgZq6a_h519pBSgCaCynxbiURbpXFUZ7Qqn-iF2Pj6Wp58Bq" target="_blank" rel="external">crond</a></li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-08-04T07:09:47.000Z"><a href="/essays/2015/08/04/git-use-abstract/">2015-08-04</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/essays/2015/08/04/git-use-abstract/">git 使用总结</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <!-- [TOC] -->
-<h2 id="常用命令">常用命令</h2><pre><code><span class="blockquote">&gt; git</span>
-</code></pre><ul>
-<li><code>git add</code></li>
-<li><code>git branch</code></li>
-<li><code>git checkout</code></li>
-<li><code>git cherry-pick</code></li>
-<li><code>git clone</code></li>
-<li><code>git commit</code></li>
-<li><code>git diff</code></li>
-<li><code>git fetch</code></li>
-<li><code>git init</code></li>
-<li><code>git log</code></li>
-<li><code>git merge</code></li>
-<li><code>git mv</code></li>
-<li><code>git pull</code></li>
-<li><code>git push</code></li>
-<li><code>git rebase</code></li>
-<li><code>git remote</code></li>
-<li><code>git reset</code></li>
-<li><code>git rm</code></li>
-<li><code>git show</code></li>
-<li><code>git stash</code></li>
-<li><code>git status</code></li>
-<li><code>git tag</code></li>
-</ul>
-<h2 id="协作模型">协作模型</h2><h2 id="参考文章">参考文章</h2><p><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/08/git-use-process.html</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav></div></div>
+</div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
