@@ -49,6 +49,63 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-08-17T06:54:36.000Z"><a href="/essays/2015/08/17/vod/">2015-08-17</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/essays/2015/08/17/vod/">使用nginx实现视频点播</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><a href="https://github.com/arut/nginx-rtmp-module/wiki/Directives#video-on-demand" target="_blank" rel="external">文档</a></p>
+<p>使用 play 相关的指令可以实现点播功能。相关命令:</p>
+<ul>
+<li>play</li>
+<li>play_temp_path</li>
+<li>play_local_path</li>
+</ul>
+<h2 id="配置">配置</h2><p>使用play命令可以点播mp4和flv文件。文件路径支持<code>本地目录</code>和http指定的<code>url</code>路径。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#&#26412;&#22320;&#25991;&#20214;&#10;application vod &#123;&#10;    play /var/flvs;&#10;&#125;&#10;&#10;#&#32593;&#32476;&#20013;&#30340;&#25991;&#20214;&#10;application vod_http &#123;&#10;    play http://myserver.com/vod;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>play 指令中可以指定多个文件路径</p>
+</li>
+<li><p>多个play指令的时候，会合并指令中的位置。在播放的时候会在这些路径列表中的文件夹下依次查找，查不到，就会给前端返回一个错误。</p>
+</li>
+<li><p>mp4 文件需要 采用 H.264 和 AAC 格式编码。</p>
+</li>
+<li><p>flv文件点播需要添加关键帧（可以使用yamdi添加），<code>record</code> 指令生成的文件没有关键帧。</p>
+</li>
+</ul>
+<p>当播放一个网络文件时，nginx会先把文件下载完，然后才播放。下载文件临时存放的位置由<code>play_temp_path</code>指定，默认是存在<code>/tmp</code>文件夹下。另外，可以使用 <code>play_local_path</code>指令，把下载的文件复制到本地，配合play指令可以指定多个路径列表的特点，提高性能，不用是ngx每次都去下载网络视频资源。</p>
+<p>配置更改如下即可实现点播url指定的文件，同时可以将文件缓存再本地，提高性能。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#&#32593;&#32476;&#20013;&#30340;&#25991;&#20214;&#10;application vod_http &#123;&#10;    play_local_path /tmp/videos;&#10;    play /tmp/videos http://example.com/videos;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="添加关键帧">添加关键帧</h2><pre><code>yamdi –<span class="tag">i</span> src<span class="class">.flv</span> –o dst.flv
+</code></pre><p><a href="http://yamdi.sourceforge.net/" target="_blank" rel="external">yamdi 文档</a></p>
+<h2 id="点播视频">点播视频</h2><p>可以使用ffmpeg自带的ffplay</p>
+<pre><code>ffplay <span class="symbol">rtmp:</span>/<span class="regexp">/localhost/vod</span><span class="regexp">//dir</span><span class="regexp">/file.flv</span>
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2015-08-12T09:20:51.000Z"><a href="/essays/2015/08/12/How-to-set-up-your-own-private-RTMP-server-using-nginx/">2015-08-12</a></time>
       
       
@@ -469,35 +526,59 @@ $ sudo <span class="regexp">/usr/</span>local<span class="regexp">/nginx/</span>
   <h3 class="title">标签</h3>
   <ul class="entry">
   
-    <li><a href="/essays/tags/draft/">draft</a><small>0</small></li>
+    
   
-    <li><a href="/essays/tags/erlang/">erlang</a><small>1</small></li>
+    
+        <li><a href="/essays/tags/erlang/">erlang</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/git/">git</a><small>1</small></li>
+    
+        <li><a href="/essays/tags/git/">git</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/linux/">linux</a><small>1</small></li>
+    
+        <li><a href="/essays/tags/linux/">linux</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/nginx/">nginx</a><small>1</small></li>
+    
+        <li><a href="/essays/tags/nginx/">nginx</a><small>2</small></li>
+    
   
-    <li><a href="/essays/tags/ngxin/">ngxin</a><small>1</small></li>
+    
+        <li><a href="/essays/tags/nginx-rtmp-module/">nginx-rtmp-module</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/php/">php</a><small>1</small></li>
+    
+        <li><a href="/essays/tags/ngxin/">ngxin</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/rtmp/">rtmp</a><small>1</small></li>
+    
+        <li><a href="/essays/tags/php/">php</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/swoole/">swoole</a><small>0</small></li>
+    
+        <li><a href="/essays/tags/rtmp/">rtmp</a><small>2</small></li>
+    
   
-    <li><a href="/essays/tags/总结/">总结</a><small>0</small></li>
+    
   
-    <li><a href="/essays/tags/札记/">札记</a><small>0</small></li>
+    
   
-    <li><a href="/essays/tags/翻译/">翻译</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/草稿/">草稿</a><small>0</small></li>
+    
+        <li><a href="/essays/tags/翻译/">翻译</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/读书笔记/">读书笔记</a><small>1</small></li>
+    
   
-    <li><a href="/essays/tags/配置/">配置</a><small>1</small></li>
+    
+        <li><a href="/essays/tags/读书笔记/">读书笔记</a><small>1</small></li>
+    
+  
+    
+        <li><a href="/essays/tags/配置/">配置</a><small>1</small></li>
+    
   
   </ul>
 </div>
@@ -517,14 +598,6 @@ $ sudo <span class="regexp">/usr/</span>local<span class="regexp">/nginx/</span>
 
 
 
-
-<link rel="stylesheet" href="/essays/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/essays/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
 
 </body>
 </html>
